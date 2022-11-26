@@ -58,9 +58,14 @@ namespace Projeto_Final_Poo_Beta
             {
                 MessageBox.Show("Digite Algo");
             }
-            else
+
+            try
             {
                 altura = double.Parse(caixatexto2.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Digite apenas valores númericos", "Digite apenas números");
             }
         }
 
